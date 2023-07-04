@@ -1,0 +1,43 @@
+// Declaring Media Queries...
+
+@mixin media_query($point) {
+	@if $point == XXL {
+		@media only screen and (max-width: 2000px) { @content; 
+		/* Anything you write inside the curly braces of the @include will be generated in place of the @content directive in our mixin. */} 
+	}
+
+	// /* Large Devices, Wide Screens */
+	// @else if $point == X2L {
+	// 	@media only screen and (max-width: 1380px) { @content; }
+	// }
+	
+	/* Large Devices, Wide Screens */
+	@else if $point == XL {
+		@media only screen and (max-width: 1280px) { @content; }
+	}
+
+	 /* Medium Devices, Desktops */
+	@else if $point == L {
+		@media only screen and (max-width: 980px) { @content; }
+	}
+
+	// /* Small Devices, Tablets */
+	// @else if $point == M {
+	// 	@media only screen and (max-width: 768px) { @content; }
+	// }
+
+	/* Small Devices */
+	@else if $point == M {
+		@media only screen and (max-width: 580px) { @content; }
+	}
+	
+	// /* Extra Small Devices, Phones */
+	// @else if $point == XS {
+	// 	@media only screen and (max-width: 480px) { @content; }
+	// }
+	
+	/* Custom, iPhone Retina */ 
+	@else if $point == S { 
+		@media only screen and (max-width: 360px) { @content; }
+	}
+}
