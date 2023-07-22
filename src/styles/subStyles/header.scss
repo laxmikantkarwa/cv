@@ -1,11 +1,83 @@
 .header-wrapper {
-  min-height: 60px;
-  background-color: gray;
+  padding: 0 0 0 8px;
+  position: fixed;
+  left: 50px;
+  right: 50px;
+  top: 40px;
+  height: 80px;
+  z-index: 100;
+  background: $background;
+  border-radius: 50px;
+  color: white;
   display: flex;
   align-items: center;
-  color: #fff;
 
-  @include media_query(M) {
+  @include media_query(L) {
     display: none;
+  }
+
+  .thought-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      height: 66px;
+      width: 66px;
+      border-radius: 33px;
+    }
+
+    .thought-text {
+      font-size: 16px;
+      margin-left: 10px;
+      width: 80px;
+      font-weight: bolder;
+    }
+  }
+}
+
+.header-content-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 16px;
+
+  .header-content {
+
+    .header-content-item {
+      margin-left: 30px;
+      cursor: pointer;
+      &:hover {
+        color: $default
+      }
+    }
+  }
+
+  .header-content-button {
+    display: flex;
+    align-items: center;
+    background: $background;
+    border-radius: 33px;
+    border-style: groove;
+    border-color: $default;
+    margin-right: 8px;
+    color: $white;
+    height: 66px;
+    cursor: pointer;
+
+    .header-content-item {
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: bolder;
+      color: $default;
+    }
+
+    .download-file {
+      width: 25px;
+      height: 25px;
+      margin: 10px;
+      
+    }
   }
 }
